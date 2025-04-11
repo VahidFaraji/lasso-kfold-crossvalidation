@@ -21,9 +21,8 @@ lasso-kfold-crossvalidation/
 ├── code/
 │   ├── lasso.py            # LASSO, CV, multiframe, denoise functions
 │   └── tasks.py            # CLI-based runner for tasks 4–7
-├── notebooks/
 │   └── Task4_5.ipynb       # Jupyter notebook for LASSO analysis
 ├── data/
 │   └── A1_data.mat         # Input data (X, t, audio, etc.)
-├── results/                # Will hold plots and denoised audio (optional)
+├── Report/                # Will hold plots and denoised audio (optional)
 ├── README.md
