@@ -1,47 +1,29 @@
 # 📈 LASSO Regression with K-Fold Cross Validation
 
-This project demonstrates how to apply **K-Fold Cross Validation** to tune the regularization parameter **λ** for the **LASSO** regression model. The goal is to select the λ that minimizes validation error and avoids overfitting or underfitting.
+This project demonstrates how to use **K-Fold Cross Validation** to tune the regularization parameter **λ** for the **LASSO** regression model. It evaluates model performance via RMSE, and includes both signal reconstruction and audio denoising components.
 
 ---
 
-## 🔍 Problem Overview
+## 🧠 Topics Covered
 
-We simulate a sparse linear regression problem and evaluate how different λ values affect the model's performance. Using **K-Fold Cross Validation**, we systematically:
-
-- Split the data into `K` folds
-- Train and validate LASSO models for different λ
-- Select the λ with lowest average RMSE
-
----
-
-## 🧪 Methods
-
-- LASSO implementation via **Coordinate Descent**
-- `K = 5` folds cross-validation
-- RMSE evaluation across validation sets
+- LASSO via coordinate descent
+- Cross-validation for λ selection
+- RMSE plots for training vs validation
+- Sparse signal recovery
+- Denoising audio using spectral sparsity
 
 ---
 
-## 📁 Files
+## 📁 Folder Structure
 
-- `code/lasso_cv.py` – Cross-validation driver
-- `code/lasso_ccd.py` – LASSO implementation using coordinate descent
-- `results/rmse_vs_lambda.png` – RMSE curve across λ values
-- `results/optimal_lambda_result.png` – Prediction with best λ
-
----
-
-## 📊 Example Output
-
-<p float="left">
-  <img src="results/rmse_vs_lambda.png" width="400"/>
-  <img src="results/optimal_lambda_result.png" width="400"/>
-</p>
-
----
-
-## 🧠 Author
-
-**Vahid Faraji**  
-Master’s Student – Machine Learning, Systems and Control  
-Lund University, Sweden
+```text
+lasso-kfold-crossvalidation/
+├── code/
+│   ├── lasso.py            # LASSO, CV, multiframe, denoise functions
+│   └── tasks.py            # CLI-based runner for tasks 4–7
+├── notebooks/
+│   └── Task4_5.ipynb       # Jupyter notebook for LASSO analysis
+├── data/
+│   └── A1_data.mat         # Input data (X, t, audio, etc.)
+├── results/                # Will hold plots and denoised audio (optional)
+├── README.md
